@@ -10,16 +10,6 @@ from PIL import Image
 files = os.listdir("images_to_predict")
 print("------------------ The Results ------------------")
 for file in files:
-    # make sure the picture resolution is 224x224 
-    # Open the image
-    im = Image.open(f"images_to_predict/{file}")
-
-    # Resize the image
-    im_resized = im.resize((224, 224))
-
-    # Save the resized image
-    im_resized.save(f"images_to_predict/{file}")
-
     # checking whats the vegetable type in this picture
     test_image = image.load_img(f"images_to_predict/{file}", target_size = (64, 64))
 
